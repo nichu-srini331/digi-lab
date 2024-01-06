@@ -157,7 +157,7 @@ export default function Home() {
     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
   </div>
 
-  <div className='flex justify-center md:justify-center md:justify-start mt-6 text-purple-800'>
+  <div className='flex justify-center md:justify-center mt-6 text-purple-800'>
     <a href='' className=''>
       Compare all Pro features<ArrowForwardIcon />
     </a>
@@ -186,7 +186,27 @@ export default function Home() {
             <div className='font-medium p-2 text-center'>Fully Secured</div>
             <div className='p-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </div>
           </div>
+          
         </section>
+        <section  className='flex justify-center mt-7'>
+  <div className='   items-center pt-10'>
+    <div className='flex  flex-col'>
+      <div className='flex justify-center font-manrope text-2xl font-semibold leading-[48px] text-center'>Elevating Card Programs with Cutting-Edge Technology</div>
+      <div className='mt-5 md:mt-5'>
+  <div className='md:font-inter font-normal leading-[38px] text-gray-700 h-[66px] mt-5 w-full md:w-auto text-sm text-center md:text-left'>
+    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </div>
+
+  <div className='flex justify-center md:justify-center md:mb-7 mt-6 text-purple-800'>
+    <a href='' className=''>
+      Compare all Pro features<ArrowForwardIcon />
+    </a>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
         <section>
           
         </section>
