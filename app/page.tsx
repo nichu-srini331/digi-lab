@@ -1,113 +1,286 @@
+"use client";
 import Image from 'next/image'
+import './globals.css'
+import { IoIosLogIn } from "react-icons/io";
+import logo from '../public/Logo.png'
+import { useState } from 'react'
+import bg from '../public/Mesh.png'
+import Button from '@mui/material/Button';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Nuxt from '../public/Nux.png'
+import Mir from '../public/miro.png'
+import Lottie from '../public/Lottie.png'
+import wise from '../public/wise.png'
+import dribble from '../public/dribble.png'
+import kinsta from '../public/Kinsta.png'
+import angel from '../public/Angellist.png'
+import behance from '../public/Behance.png'
+import LanguageIcon from '@mui/icons-material/Language';
+import VpnKeyIcon from '@mui/icons-material/VpnKey';
+import LockIcon from '@mui/icons-material/Lock';
+import pht from '../public/phn.png'
+import stat from '../public/stat.png'
+import Vect from '../public/vect.png'
+import profile from '../public/profile.png'
+import StarIcon from '@mui/icons-material/Star';
+import CreditCardIcon from '@mui/icons-material/CreditCard';
+import HeadsetIcon from '@mui/icons-material/Headset';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 export default function Home() {
+  const [click,isclick] = useState(false)
+
+  const toggleNav = () => {
+    isclick(!click)
+  }
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className='container-fluid m-0 p-0' >
+  <section className='sm:p-2 flex justify-center items-center'>
+    <h2 className='px-5 text-center text-lg md:text-base lg:text-xl'>Announcement</h2>
+    <p className='text-center text-sm md:text-base lg:text-lg sm:p-0 sm:text-base'>We are happy to announce that we raised $2 Million in Seed Funding</p>
+  </section>
+  <section className='container-fluid flex justify-between sm:pr-10 s2'>
+    <nav className="w-full">
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='flex justify-between h-16'>
+          <div className='flex items-center'>
+            <div className='mr-1 md:flex-shrink-0 relative'>
+              <a href='/'>
+                <Image
+                  src={logo}
+                  width={144}
+                  height={132}
+                  alt="Picture of the author"
+                />
+              </a>
+                  </div>
+                </div>
+                <div className=' hidden md:block ml-40'>
+                  <div className='ml-5 flex justify-between item-center space-x-4'>
+                    <a href='/' className='text-black pl-11 mt-4'>Card access</a>
+                    <a href='/' className='text-black pl-6 mt-4'>Banking</a>
+                    <a href='/' className='text-black pl-5 mt-4'>Processing</a>
+                    <a href='/' className='text-black pl-9 mt-4'>About</a>
+                    <a href='/' className='text-black pl-9 mt-4'>Career</a>
+                    <a href='/' className='text-black pl-9 mt-4'>Contact</a>
+                  </div>
+                </div>
+                <div className='md:hidden flex items-center '>
+                  <button className=' inline-flex item-center justify-end p-2 ' onClick={toggleNav}>{click ?(<svg className='h-6 w-6' xmlns="https://www.w3.org/2000/svg" fill='none' viewBox="0 0 24 24" stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round'strokeWidth={2} d="M6 18L18 6M6 6l12 12"/></svg>):(<svg className='h-6 w-6' xmlns="https://www.w3.org/2000/svg" fill='none' viewBox="0 0 24 24" stroke='currentColor'><path strokeLinecap='round' strokeLinejoin='round'strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7"/></svg>)}</button>
+                </div>
+              </div>
+            </div>
+            {click && (
+              <div className='md:hidden'>
+                <div className='flex ml-7 px-2 pt-2 pb-3 space-y-1'>
+                <a href='/' className='text-black block'>Card access</a>
+                    <a href='/' className='text-black block'>Banking</a>
+                    <a href='/' className='text-black block'>Processing</a>
+                    <a href='/' className='text-black block'>About</a>
+                    <a href='/' className='text-black block'>Career</a>
+                    <a href='/' className='text-black block'>Contact</a>
+                </div>
+              </div>
+            )}
+          </nav>
+          {/* <div className="shadow-lg ml-20 flex">Login <IoIosLogIn /></div> */}
+          <div className='w-50 h-70 mt-2 md:mt-5 ml-[25%] justify-center items-center'><Button variant="contained" className="bg-purple-800" endIcon={<ArrowForwardIcon/>}>
+  Log 
+</Button></div>
+        </section>
+        <section>
+  <div className='flex justify-center items-center pt-10'>
+    <div className='m1-d relative w-[631px] h-[460px] item-center'>
+      <div className='font-inter text-base font-medium leading-[20px] text-center text-purple-800 mt-5 mb-2'> Seamless experience</div>
+      <div className='text-center max-w-[632px] sm:max-w-full sm:px-4 md:max-w-3/4 md:mx-auto lg:max-w-2/3'>
+        <div className='font-manrope text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-semibold leading-[72px] tracking-normal'>
+          Unleashing the Next Generation of Card Solutions
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+            <div><div className='font-inter text-base font-normal leading-[28px] text-center text-gray-700 mt-5'>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</div></div>
+            <div className=' mr-4 mt-5 md:mt-5 ml-[35%] justify-center items-center'><Button variant="contained" className="bg-purple-800" endIcon={<ArrowForwardIcon/>}>
+  Unlock your Card
+</Button></div>
+<div><div className='mt-3  md:font-inter text-base font-normal leading-[28px] text-center text-gray-700 '>*No credit card required</div></div>
+</div>
+          </div>
+        </section>
+        <section className='mt-9'>
+      <div className='flex flex-wrap justify-between px-3 md:px-6 lg:px-8 xl:px-12 mt-3 sm:my-4'>
+        <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2 flex justify-center'>
+          <Image src={Nuxt} width={104} height={40} alt=""/>
+        </div>
+        <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2 flex justify-center'>
+          <Image src={Mir} width={114} height={40} alt=""/>
+        </div>
+        <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2 flex justify-center'>
+          <Image src={Lottie} width={114} height={40} alt=""/>
+        </div>
+        <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2 flex justify-center'>
+          <Image src={wise} width={114} height={40} alt=""/>
+        </div>
+        <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2 flex justify-center'>
+          <Image src={dribble} width={114} height={40} alt=""/>
+        </div>
+        <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2 flex justify-center'>
+          <Image src={kinsta} width={114} height={40} alt=""/>
+        </div>
+        <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2 flex justify-center'>
+          <Image src={angel} width={114} height={40} alt=""/>
+        </div>
+        <div className='w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-2 flex justify-center'>
+          <Image src={behance} width={114} height={40} alt=""/>
+        </div>
+       
       </div>
+    </section>
+        <section  className='flex justify-center mt-7'>
+  <div className=' flex  items-center pt-10'>
+    <div className=''>
+      <div className=' flex justify-center font-manrope text-2xl font-semibold leading-[48px] text-center'>Elevating Card Programs with Cutting-Edge Technology</div>
+      <div className='font-inter  font-normal leading-[38px] text-gray-700  h-[66px] mt-5 w-64 md:w-auto truncate text-sm'>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+      <div className='flex justify-center mt-6  text-purple-800'><a><div>Compare all Pro features<ArrowForwardIcon/></div></a></div>
+    </div>
+  </div>
+</section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <section className='flex flex-wrap md:justify-center sm:ml-10 m-10 ml-7'>
+          <div className=' justify-center gap-6 md:gap-26 ml-8 md:ml-0 '>
+            <div className='flex justify-center'>       
+        <LanguageIcon className='border border-solid border-purple-100 w-12 h-12  rounded-full  p-2 text-purple-800'/>
+</div>
+         <div className='font-medium p-2 text-center'>Globally Accepted</div>
+            <div className='p-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </div>
+          </div>
+          <div className=' justify-center gap-6 md:gap-26 ml-9 md:ml-0 '>
+            <div  className='flex justify-center'><VpnKeyIcon className='border border-solid border-purple-100 w-12 h-12 rounded-full ml-20% p-2 text-purple-800'/></div>
+            <div className='font-medium p-2 text-center'>Biometric Integrated</div>
+            <div className='p-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </div>
+          </div>
+          <div className=' justify-center gap-6 md:gap-26 ml-8 md:ml-0 '>
+            <div  className='flex justify-center'><LockIcon className='border border-solid border-purple-100 w-12 h-12 rounded-full ml-20% p-2 text-purple-800 '/></div>
+            <div className='font-medium p-2 text-center'>Fully Secured</div>
+            <div className='p-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </div>
+          </div>
+        </section>
+        <section>
+          
+        </section>
+        <section>
+          <div className='flex flex-wrap justify-center items-center'>
+            <Image src={pht} width={500} height={400} alt='' className='mr-10'/>
+            <Image src={stat} width={500} height={400} alt=''/>
+          </div>
+        </section>
+        <section>
+          <div className='flex flex-wrap m-9 pt-9 justify-center'>
+          <div className='justify-center'>
+            <div><h1 className='text-purple-800 font-manrope text-3xl font-semibold leading-[56px] text-center'>2 Million</h1></div>
+            <div className='font-medium p-2 text-center'>Customer</div>
+            <div className='p-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </div>
+          </div>
+          <div className=' justify-center '>
+            <div><h1 className='text-purple-800 font-manrope text-3xl font-semibold leading-[56px] text-center'>1 K</h1></div>
+            <div className='font-medium p-2 text-center'>Download</div>
+            <div className='p-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </div>
+          </div>
+          <div className='justify-center'>
+            <div><h1 className='text-purple-800 font-manrope text-3xl font-semibold leading-[56px] text-center'>$73 Million</h1></div>
+            <div className='font-medium p-2 text-center'>Transaction</div>
+            <div className='p-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </div>
+          </div>
+          <div className='justify-center'>
+            <div><h1 className='text-purple-800 font-manrope text-3xl font-semibold leading-[56px] text-center'>2.0</h1></div>
+            <div className='font-medium p-2 text-center'>Latest Version</div>
+            <div className='p-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </div>
+          </div>
+          </div>
+        </section>
+        <section className='flex flex-wrap justify-center '>
+          <div>
+            <div className='flex justify-center p-11'><Image src={Vect} width={100} height={25} alt=""/></div>
+            <div className='font-manrope text-2xl font-medium leading-[40px] text-center justify-center ml-10'>I had the pleasure of experiencing the next generation of card solutions with this incredible product. It's refreshing to see such innovation in the financial industry.</div>
+            <div className='flex justify-center p-11'><Image src={profile} width={100} height={30} alt=""/></div>
+            <div className='txt-6'>Nick Babich</div>
+            <div className='txt-61'>Lead Designer</div>
+            <div className='flex justify-center p-8'><StarIcon className='sub-5'/><StarIcon className='sub-5'/><StarIcon className='sub-5'/><StarIcon className='sub-5'/></div>
+          </div>
+        </section>
+        <section className='justify-center'>
+          <div className=' font-manrope text-2xl font-semibold leading-[48px] text-center justify-center'>Unlock Limitless Possibilities with Our New Card Solutions</div>
+          <div className='flex flex-wrap justify-center'>
+          <div className='flex justify-center items-center mr-6 p-5'><Button variant="contained" className="btn-c" endIcon={<CreditCardIcon/>}>Unlock your card</Button></div>
+          <div className='flex justify-center items-center p-5'><Button variant="contained" className="bg-gray-200 text-gray-600" endIcon={<HeadsetIcon/>}>Customer support</Button></div>
+          </div>
+        </section>
+        <section className='flex justify-center'>
+          <div className='p-5'>
+            <div className='flex justify-center'><Image
+      src={logo}
+      width={84}
+      height={16}
+      alt="Picture of the author"
+      className='flex justify-center'
+    /></div>
+    <div className='text-gray-700 font-inter text-base font-medium leading-[28px] text-center w-102 h-82 whitespace-normal md:whitespace-nowrap'>Mode UI is a comprehensive design system that empowers designers and developers to create cohesive and visually stunning user interfaces across various platforms and devices</div>
+          </div>
+        </section>
+        <section>
+          <div className='flex flex-wrap justify-between m-10'>
+            <div className=''>
+              <p className='p-1 py-5'>Company</p>
+              <p className='p1'>About Us</p>
+              <p className='p1'> Pricing </p>
+              <p className='p1'> Contact Us </p>
+              <p className='p1'> Features </p>
+            </div>
+            <div className=''>
+              <p className='p-1 py-5'>Product</p>
+              <p className='p1'>Figma design system</p>
+              <p className='p1'> Ios kit </p>
+              <p className='p1'> Android kit</p>
+              <p className='p1'> Wireframe </p>
+            </div>
+            <div className=''>
+              <p className='p-1 py-5'>Resources</p>
+              <p className='p1'>Templates</p>
+              <p className='p1'> Landing pages </p>
+              <p className='p1'> Documentation </p>
+              <p className='p1'> Comp library </p>
+            </div>
+            <div className=''>
+              <p className='p-1 py-5'>Legal</p>
+              <p className='p1'>Privacy policy</p>
+              <p className='p1'> Terms & Conditions</p>
+              <p className='p1'> Disclaimer </p>
+              <p className='p1'> Affiliate programme </p>
+            </div>
+            <div className=''>
+              <p className='p-1 py-5'>Support</p>
+              <p className='p1'>Help centre</p>
+              <p className='p1'> Raise ticket </p>
+              <p className='p1'> Report </p>
+              <p className='p1'> Refund </p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div>
+            <div className='flex justify-center mr-10'>
+              <div className='m-5'><LinkedInIcon/></div>
+              <div className='m-5'><GitHubIcon/></div>
+              {/* <div><FontAwesomeIcon icon="fa-brands fa-discord" /></div> */}
+            </div>
+            <div className='flex justify-center'>
+            <div className='p-9'>© 2023 Mode UI  Inc. All Rights Reserved.</div>
+            </div>
+           
+          </div>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+     
     </main>
   )
 }

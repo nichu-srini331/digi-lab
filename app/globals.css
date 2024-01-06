@@ -17,11 +17,234 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color:"Black";
+ 
 }
+.announce{
+  border: 1px solid rgb(204, 200, 200) !important;
+  width: 100%;
+  border-radius: 240px;
+  margin-right: 20px;
+  background-color:Neutral/1000
+
+}
+
+.login{
+  width: 30px !important;
+  height: 30px;
+}
+
+.div-log{
+  border: 1px solid rgb(204, 200, 200) !important;
+  border-radius: 240px;
+  width: 110px;
+  height: 40px;
+  background-color:Neutral/1000
+}
+
+.s2{
+  border-bottom: 1px solid rgb(124, 123, 123);
+  border-top: 1px solid rgb(124, 123, 123);
+  
+}
+
+.m1-d{
+background-image: url('../public/Mesh.png');
+background-size: cover;
+}
+
+.Seam{
+font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: center;
+color: #582066;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+.h1-h1{
+font-family: Manrope;
+font-size: 62px;
+font-weight: 600;
+line-height: 72px;
+letter-spacing: 0em;
+text-align: center;
+margin-left: -30px;
+width: 632px;
+height: 200px;
+}
+
+.h1-ht{
+
+}
+
+.sub-t{
+
+font-family: Inter;
+font-size: 18px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0em; /*font-inter text-base font-normal leading-[28px] text-center text-gray-700 mt-5*/
+text-align: center;
+color: #5A6475;
+margin-top: 20px;
+
+}
+.btn-c{
+  background-color: #582066;
+
+}
+.btn-c1{
+  background-color:#EEEFEF;
+  color: #5A6475;
+
+}
+.btn-t{
+  margin-top: 20px;
+  margin-left: 35%;
+}
+
+.sub-2{
+font-family: Manrope;
+font-size: 40px;
+font-weight: 600;
+line-height: 48px;
+letter-spacing: 0em;
+text-align: center; /*font-manrope text-2xl font-semibold leading-[48px] text-center*/
+
+}
+
+.sub-t-2{
+
+
+}
+.sub-3{
+color:#5A6475;
+font-family: Inter;
+font-size: 18px;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0em; /*font-inter text-base font-normal leading-[28px] text-center text-gray-700 w-72 h-14 mt-5*/
+text-align: center;
+width: 576px;
+height: 56px;
+margin-top: 20px;
+
+}
+.tt{
+/*text-purple-800 font-inter text-base font-medium leading-5 text-center*/
+  
+}
+.box{
+  width: 352px;
+height: 156px;
+gap: 26px;
+justify-content: center;/*flex flex-wrap justify-center gap-6 ml-8*/
+margin-left: 30px;  
+text-align: center;
+}
+
+.ic-n{
+  font-weight: 500;
+  padding: 10px;
+  text-align: center;/*font-medium p-2 text-center*/
+}
+
+.icon{
+  margin-left: 20%;
+  border: 1px solid #F4EFF6;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+padding: 8px;
+color: #582066;
+}
+
+.b4{
+color: #582066;
+font-family: Manrope;
+font-size: 48px;
+font-weight: 600;
+line-height: 56px;
+letter-spacing: 0em;
+text-align: center; /*="text-purple-800 font-manrope text-3xl font-semibold leading-[56px] text-center"*/
+
+}
+
+.txt-4{
+font-family: Manrope;
+font-size: 32px;
+font-weight: 500;
+line-height: 40px;
+letter-spacing: 0em;
+text-align: center;/*font-manrope text-2xl font-medium leading-[40px] text-center*/
+
+
+
+}
+
+.sub-5{
+color: gold;
+ 
+}
+
+.txt-6{
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center;
+  
+}
+
+.txt-61{
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: center; 
+}
+
+.pht{
+  text-align: center;
+}
+
+.txt-9{
+
+font-family: Manrope;
+font-size: 40px;
+font-weight: 600;
+line-height: 48px;
+letter-spacing: 0em;/*font-manrope text-2xl font-semibold leading-[48px] text-center*/
+text-align: center;
+}
+
+.txt-10{
+ color: #5A6475;
+font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+line-height: 28px;
+letter-spacing: 0em;/*text-gray-700 font-inter text-base font-medium leading-[28px] text-center w-64 h-20*/
+text-align: center;
+width: 512px;
+height: 84px;
+
+}
+
+.p-1{
+font-family: Inter;
+font-size: 16px;
+font-weight: 700;
+line-height: 20px;
+letter-spacing: 0em;
+text-align: left;/*font-inter text-base font-bold leading-5 text-left*/
+
+}
+
+.p1{}
