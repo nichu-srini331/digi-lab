@@ -201,7 +201,7 @@ export default function Home() {
         <section className='flex flex-wrap justify-center '>
           <div>
             <div className='flex justify-center p-11'><Image src={Vect} width={100} height={25} alt=""/></div>
-            <div className='font-manrope text-2xl font-medium leading-[40px] text-center justify-center ml-10'>I had the pleasure of experiencing the next generation of card solutions with this incredible product. It's refreshing to see such innovation in the financial industry.</div>
+            <div className='font-manrope text-2xl font-medium leading-[40px] text-center justify-center ml-10'>I had the pleasure of experiencing the next generation of card solutions with this incredible product. Its refreshing to see such innovation in the financial industry.</div>
             <div className='flex justify-center p-11'><Image src={profile} width={100} height={30} alt=""/></div>
             <div className='txt-6'>Nick Babich</div>
             <div className='txt-61'>Lead Designer</div>
